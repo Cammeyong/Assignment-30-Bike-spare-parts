@@ -1,0 +1,104 @@
+<div class="brandItems">
+    <aside>
+        <div class="filter">
+            <h2>FILTER BY PRICE</h2>
+            <input type="range" name="" id="">
+            <br>
+            <div class="filtPrice">
+                <button>FILTER</button>
+
+            <p>Price:₹0 - ₹47030</p>
+
+            </div>
+            
+        </div>
+
+        <div class="productCategory">
+
+            <h2>PRODUCT CATEGORES</h2>
+
+            <div class="category">
+                <ul>
+                    <li>Bike Accessories <span>(271)</span></li>
+                    <li>Bike Parts<span>(389)</span></li>
+                    <li>Pre-owned Bikes<span>(2)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="brandsCon">
+            <h2>BRANDS</h2>
+
+            <div class="brands">
+                
+                <ul>
+                    <li><a href="">Bajaj</a></li>
+                    <li><a href="">Benelli</a></li>
+                    <li><a href="">BMW</a></li>
+                    <li><a href="">Commando</a></li>
+                    <li><a href="">Ducati</a></li>
+                    <li><a href="">Harley Davidson</a></li>
+                    <li><a href="">Hero</a></li>
+                    <li><a href="">Honda</a></li>
+                    <li><a href="">Hyosung</a></li>
+                    <li><a href="">Kawasaki</a></li>
+                    <li><a href="">KTM</a></li>
+                    <li><a href="">Royal Enfield</a></li>
+                    <li><a href="">Suzuki</a></li>
+                    <li><a href="">TVS</a></li>
+                    <li><a href="">Universal</a></li>
+                    <li><a href="">Yamaha</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    
+
+
+    <div ng-controller="myController" class="itemsCon">
+        <h1>Bike Parts</h1>
+
+        <div class="showing">
+
+            <p>showing 13-24 of 389 results</p>
+
+            <ul>
+                <li><i class="fa fa-arrow-left"></i></li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>...</li>
+                <li>31</li>
+                <li>32</li>
+                <li>33</li>
+                <li><i class="fa fa-arrow-right"></i></li>
+            </ul>
+
+            <select name="sortBy" id="sortBy">
+                <option value="">Default Sorting</option>
+                <option value="">Sort by popularity</option>
+                <option value="">Sort by average ratings</option>
+                <option value="">Sort by latest</option>
+                <option value="">Sort by price: low to high</option>
+                <option value="">Sort by price: high to low</option>
+            </select>
+        </div>
+
+        <div ng-repeat="item in items | filter: searchBar" class="subItemCon"> 
+
+            <div class="partsImg" style="width: 250px; height: 250px;">
+                <img src="{{item.img}}" alt="">
+            </div>
+
+            <div class="itemInfo">
+                <p>{{item.brand}}</p>
+                <p>{{item.rating}}</p>
+                <p>{{item.price | currency: '₹'}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>

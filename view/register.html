@@ -1,0 +1,83 @@
+   
+<form action="" name="loginRegister" novalidate>
+
+    <div class="account" >
+
+        <h1>My Account</h1>
+
+        <div class="row">
+
+            <div class="col">
+                <h2>Login</h2>
+
+                <label>Username or email address <span>*</span></label>
+                <br><br>
+
+                <input type="text" name="name" id="name" ng-model="name" ng-required="true">
+                <br><br>
+                <span ng-show="loginRegister.name.$touched && loginRegister.name.$invalid">
+                    <p ng-show="loginRegister.name.$error.required">Please to enter your name or email address.</p>
+                </span>
+
+                <label>Password <span>*</span></label>
+                <br><br>
+
+                <input type="password" name="password" id="password" ng-model="password" ng-minlength="8" ng-required="true">
+                <br><br>
+                <span ng-show="loginRegister.password.$touched && loginRegister.password.$invalid">
+                    <p ng-show="loginRegister.password.$error.required">Please to enter your correct password.</p>
+                    
+                </span>
+
+                <label for="remember">
+                    <input type="checkbox" name="remember" id="remember"> Remember me
+                </label>
+                <br><br>
+
+                <button ng-submit>LOG IN</button>
+
+                <p style="color: orange; font-size: 20px;">Lost your password?</p>
+            </div>
+
+            <div class="col">
+                    <h2>Register</h2>
+
+                    <label>Username <span>*</span></label>
+                    <br><br>
+
+                    <input type="text" name="userName" id="userName" ng-model="userName" ng-required="true">
+                    <br><br>
+                    <span ng-show="loginRegister.userName.$touched && loginRegister.userName.$invalid">
+                        <p ng-show="loginRegister.userName.$error.required">Please to enter your username.</p>
+                    </span>
+
+                    <label>Email address <span>*</span></label>
+                    <br><br>
+                    
+                    <input type="email" name="userEmail" id="email" ng-model="userEmail" ng-required="true" >
+                    <br><br>
+                    <span ng-show="loginRegister.userEmail.$error.email">
+                        <p>Invalid email address!</p>
+                    </span>
+
+                    <label>Password <span>*</span></label>
+                    <br><br>
+
+                    <input type="password" name="userPassword" id="userPassword" ng-model="userPassword" ng-required="true">
+                    <span ng-show="loginRegister.userPassword.$touched && loginRegister.userPassword.$invalid">
+                        <p ng-show="loginRegister.userPassword.$error.required">Please to enter a valid password.</p>
+                        <p ng-show="loginRegister.userPassword.$error.minlength">Your password must be eight (8) characters or more.</p>
+                    </span>
+                    <br>
+
+                    <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <label style="color: orange;">privacy policy</label>.</p>
+                    <br>
+
+                    <button ng-submit>REGISTER</button>
+
+
+            </div>
+        </div>
+    </div>
+</form>
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+
+</head>
+<body>
+    <div ng-include="'/header.html'"></div>
+
+   <div ng-view></div>
+
+  
+  
+
+<footer>
+    <div class="col">
+        <h3>ABOUT US</h3>
+
+        <P>We are bike enthusiasts who posses few motorcycles as trading in such machines is our bread and butter. As an bike enthusiast we ease out the process of procuring spares and accessories for our esteemed customers</P>
+    </div>
+
+    <div class="col">
+
+        <h3 style="margin-left: 15%;">PAGES</h3>
+
+        <ul>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms & Conditions</a></li>
+            <li><a href="">Return Policy</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="col">
+        <h3 style="margin-left: 15%;">FOLLOW US</h3>
+
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i>Youtube</a></li>
+        </ul>
+    </div>
+
+    <div class="col">
+
+        <h3>CONTACT US</h3>
+
+        <i class="fa fa-map-marker"></i>
+        <span>Shop no. 13, Hawabi Building, Jail Rd, Dongri, Near Sandhurst Road Station, Mumbai - 400009</span>
+        <br><br>
+
+        <i class="fa fa-phone"></i>
+        <span>+91 786 8044 786</span>
+        <br><br>
+
+        <i class="fa fa-envelope"></i>
+        <span>altamashskhan@gmail.com</span>
+    </div>
+
+</footer>
+
+<div class="copyright">
+        
+    <p>&copy;Open Throttle Racers 2019. All rights reserved.</p>
+</div>
+
+<button onclick="topFunction()" id="scrollUp" title="Scroll up"><i class="fa fa-arrow-up"></i></button>
+
+
+<script src="index.js"></script>
+</body>
+</html>
